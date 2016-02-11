@@ -12,7 +12,7 @@ module.exports = function (input) { 'use strict';
 			if (err) throw err;
 
 			if (!Buffer.isBuffer(buf)) throw 'Got no buffer!';
-			if (!isUtf8(buf)) throw 'File is not in UTF-8 encoding!';
+			// if (!isUtf8(buf)) throw 'File is not in UTF-8 encoding!';
 			if (buf[0] === 0xEF && buf[1] === 0xBB && buf[2] === 0xBF)
 				return console.log('File %s already has BOM markers!', input);
 
